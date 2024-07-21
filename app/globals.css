@@ -22,7 +22,15 @@ body {
 }
 
 .text-highligh {
-  color: rgb(165 243 252)
+  color: #a5f3fc
+}
+
+.link {
+  color: #fafafa;
+
+  &:hover {
+    color: #a5f3fc;
+  }
 }
 
 @layer utilities {
