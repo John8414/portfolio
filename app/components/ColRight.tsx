@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { toSlug } from '../utils'
 import clsx from 'clsx';
-import { Experience, Project, Skills } from '.';
+import { Experience, Project, Skills, Card } from '.';
 
 const content = {
   highlightText: "huỳnh",
@@ -45,12 +45,10 @@ const ColRight = () => {
   }
   return (
     <div className='flex flex-col gap-8'>
+      <Card />
       <div className='xl:block hidden'>
         <h1 className='text-highligh uppercase xl:text-6xl text-2xl font-bold flex flex-col gap-8'>
-          <span>{content?.highlightText}</span>
-          <span className='xl:pl-48'>
-            {content?.title}
-          </span>
+          {content?.highlightText} {content?.title}
         </h1>
         <p className='xl:text-2xl'>{content?.subtitle}</p>
       </div>

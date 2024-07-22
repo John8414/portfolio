@@ -32,6 +32,9 @@ body {
     color: #a5f3fc;
   }
 }
+.transition{
+  transition: all ease-in-out .3s;
+}
 
 @layer utilities {
   .text-balance {

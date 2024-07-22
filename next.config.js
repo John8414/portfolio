@@ -10,5 +10,6 @@ module.exports = {
         pathname: '/public/**',
       },
     ],
+    unoptimized: true
   },
 };
