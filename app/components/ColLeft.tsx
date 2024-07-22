@@ -33,7 +33,7 @@ const ColLeft = () => {
       </div>
       <div className='flex flex-col gap-2'>
         <h2 className='text-highligh xl:text-2xl pb-4 uppercase'>EDUCATION</h2>
-        <p>Bachelor's Degree in
+        <p>Bachelor&apos;s Degree in
           Business Management
           at Hanoi Open University</p>
       </div>
