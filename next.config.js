@@ -1,5 +1,6 @@
 module.exports = {
-  distDir: 'build',
+  output: 'export',
+  distDir: 'out',
   images: {
     remotePatterns: [
       {
