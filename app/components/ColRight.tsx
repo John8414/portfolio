@@ -7,7 +7,7 @@ import { Experience, Project, Skills, Card } from '.';
 
 const content = {
   highlightText: "huỳnh",
-  title: "đại nguyên",
+  title: "đại nguyên muahahahaha",
   subtitle: "Frontend Developer",
   sections: [
     {
