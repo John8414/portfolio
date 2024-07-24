@@ -12,9 +12,9 @@ export interface ICard {
     imageUrl?: string;
     imageAlt?: string;
   }
-  tags: {
-    text?: string,
-    link?: string,
+  tags?: {
+    text: string,
+    link: string,
   }[];
 }
 
@@ -42,7 +42,7 @@ const Card = ({ type,
       <div className="flex flex-row gap-2 items-center justify-start">
         {tags?.length && tags?.map((item, index: number) =>
           <button
-            key={item.link || "" + index}
+            key={JSON.stringify(item?.link + index)}
             onClick={() => { router.push(item.link || "") }}
             className='bg-[#4aa6b3] hover:bg-[#67e8f9] transition px-3 py-1 rounded-3xl'>{item.text || ""}
           </button>

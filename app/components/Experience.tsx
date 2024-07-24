@@ -5,7 +5,7 @@ const content = [
   {
     title: "Title",
     subtitle: "Subtitle",
-    description: ["Description11", "Description23", "Description1234", "Description53"],
+    description: ["Description112", "Description23", "Description1234", "Description53"],
     image: {
       imageUrl: "https://via.placeholder.com/150",
       imageAlt: "Image alt"
@@ -41,7 +41,7 @@ const Experience = () => {
     <div>
       {content?.length && content?.map((card, index: number) =>
         <Card
-          key={card.title || "" + index}
+          key={card.title + index}
           title={card.title || ""}
           subtitle={card.subtitle || ""}
           description={card.description || ""}
