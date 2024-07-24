@@ -1,9 +1,9 @@
 "use client"
 
-import React, { useState } from 'react'
-import { toSlug } from '../utils'
 import clsx from 'clsx';
-import { Experience, Project, Skills, Card } from '.';
+import { useState } from 'react';
+import { Experience, Project, Skills } from '.';
+import { toSlug } from '../utils';
 
 const content = {
   highlightText: "huỳnh",
@@ -30,8 +30,9 @@ const content = {
   ]
 }
 const ColRight = () => {
-
   const [slide, setSlide] = useState("#personal-skills")
+  console.log(slide, "slide>>>>")
+  console.log(slide, "slide>>>>")
   let block
   switch (slide) {
     case "personal-skills": block = <Skills />
@@ -44,7 +45,6 @@ const ColRight = () => {
   }
   return (
     <div className='flex flex-col gap-8'>
-      <Card />
       <div className='xl:block hidden'>
         <h1 className='text-highligh uppercase xl:text-6xl text-2xl font-bold flex flex-col gap-8'>
           {content?.highlightText} {content?.title}
@@ -52,7 +52,7 @@ const ColRight = () => {
         <p className='xl:text-2xl'>{content?.subtitle}</p>
       </div>
       <div className='flex gap-4'>
-        {content?.sections?.map((items: any, index: number) => <p className={clsx('cursor-pointer link border-red-100 border-r-2 pr-4 last-of-type:border-none',)} key={items.title + index} onClick={() => { setSlide(toSlug(items.title)) }} >{items.title}</p>)}
+        {content?.sections?.map((items: any, index: number) => <p className={clsx(slide === toSlug(items.title) ? "!text-[#a5f3fc]" : "", 'cursor-pointer link border-red-100 border-r-2 pr-4 last-of-type:border-none')} key={items.title + index} onClick={() => { setSlide(toSlug(items.title)) }} >{items.title}</p>)}
       </div>
       {block}
     </div >)
