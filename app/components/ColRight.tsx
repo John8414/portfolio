@@ -32,7 +32,6 @@ const content = {
 const ColRight = () => {
 
   const [slide, setSlide] = useState("#personal-skills")
-  console.log(slide, ">>>>>")
   let block
   switch (slide) {
     case "personal-skills": block = <Skills />
