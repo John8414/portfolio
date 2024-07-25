@@ -42,6 +42,7 @@ const Experience = () => {
       {content?.length && content?.map((card, index: number) =>
         <Card
           key={card.title + index}
+          type="horizontal"
           title={card.title || ""}
           subtitle={card.subtitle || ""}
           description={card.description || ""}

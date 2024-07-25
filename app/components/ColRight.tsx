@@ -30,10 +30,10 @@ const content = {
   ]
 }
 const ColRight = () => {
-  const [slide, setSlide] = useState("#personal-skills")
+  const [slide, setSlide] = useState("technical-skills")
   let block
   switch (slide) {
-    case "personal-skills": block = <Skills />
+    case "technical-skills": block = <Skills />
       break;
     case "work-experience": block = <Experience />
       break;
@@ -50,7 +50,7 @@ const ColRight = () => {
         <p className='xl:text-2xl'>{content?.subtitle}</p>
       </div>
       <div className='flex gap-4'>
-        {content?.sections?.map((items: any, index: number) => <p className={clsx(slide === toSlug(items.title) ? "!text-[#a5f3fc]" : "", 'cursor-pointer link border-red-100 border-r-2 pr-4 last-of-type:border-none first-of-type:!text-[#a5f3fc]')} key={items.title + index} onClick={() => { setSlide(toSlug(items.title)) }} >{items.title}</p>)}
+        {content?.sections?.map((items: any, index: number) => <p className={clsx(slide === toSlug(items.title) ? "!text-[#a5f3fc]" : "", 'cursor-pointer link border-red-100 border-r-2 pr-4 last-of-type:border-none')} key={items.title + index} onClick={() => { setSlide(toSlug(items.title)) }} >{items.title}</p>)}
       </div>
       {block}
     </div >)

@@ -2,23 +2,9 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react'
+import { ICard } from './Card';
 
-export interface ICard {
-  type?: string;
-  title: string;
-  subtitle?: string;
-  description?: string[]
-  image?: {
-    imageUrl?: string;
-    imageAlt?: string;
-  }
-  tags?: {
-    text: string,
-    link: string,
-  }[];
-}
-
-const Card = ({ type,
+const CardVertical = ({
   title,
   subtitle,
   description,
@@ -28,18 +14,23 @@ const Card = ({ type,
   const router = useRouter()
 
   return (
-    <div className='py-8'>
-      <Image src={image && image?.imageUrl || ""} alt={image && image?.imageAlt || ""} width={32} height={32} />
-      <h3>{title}</h3>
-      <h4>{subtitle}</h4>
-      <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-4'>
+      <div className="relative w-full">
+        <Image className="w-full rounded-lg" src={image && image?.imageUrl || ""} alt={image && image?.imageAlt || ""} width={32} height={32} />
+        <div className="absolute bottom-0 w-full text-center">
+          <h3>{title}</h3>
+          <h4>{subtitle}</h4>
+        </div>
+      </div>
+
+      <div className='flex flex-col gap-2 pl-4'>
         {
           description?.length && description?.map((item, index: number) =>
             <p key={item + index}>{item}</p>
           )
         }
       </div>
-      <div className="flex flex-row gap-2 items-center justify-start">
+      <div className="flex flex-row flex-wrap gap-2 items-center justify-start">
         {tags?.length && tags?.map((item, index: number) =>
           <button
             key={JSON.stringify(item?.link + index)}
@@ -52,4 +43,4 @@ const Card = ({ type,
   )
 }
 
-export default Card
+export default CardVertical
