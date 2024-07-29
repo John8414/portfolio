@@ -1,45 +1,84 @@
+"use client"
 import React from 'react'
 import { Card } from '.'
 const content = [
   {
-    title: "Title",
-    subtitle: "Subtitle",
-    description: ["Description112", "Description23", "Description1234", "Description53"],
+    title: "Dision Tech",
+    link: "https://dision.tech/",
+    subtitle: "Team member",
+    description: ["Working closely with designer team via Figma", "Using Strapi as a headless CMS and support SEO."],
     image: {
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/images/project-2.jpg",
       imageAlt: "Image alt"
     },
     tags: [
-      { text: "ReactJS", link: "https://react.dev/" },
-      { text: "NextJS", link: "https://react.dev/" },
-      { text: "Redux", link: "https://react.dev/" },
-      { text: "TailWind", link: "https://react.dev/" },
-      { text: "Antd", link: "https://react.dev/" }
+      { text: "NextJS", link: "https://nextjs.org/" },
+      { text: "Redux", link: "https://redux.js.org/" },
+      { text: "Strapi", link: "https://strapi.io/" },
+      { text: "TailWind", link: "https://tailwindcss.com/" },
+      { text: "Antd", link: "https://ant.design/" }
     ]
   },
   {
-    title: "Title1",
-    subtitle: "Subtitle1",
-    description: ["Description11", "Description12", "Description3", "Description4"],
+    title: "Orion",
+    link: "",
+    subtitle: "Team member",
+    description: ["A client platform for customer looking and booking hotel.", "Property management hotel-specific system."],
     image: {
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/images/project-1.jpg",
+      imageAlt: "Image alt"
+    },
+    tags: [
+      { text: "NextJS", link: "https://nextjs.org/" },
+      { text: "Redux", link: "https://redux.js.org/" },
+      { text: "Axios", link: "https://axios-http.com/docs/intro" },
+      { text: "TailWind", link: "https://tailwindcss.com/" },
+      { text: "Strapi", link: "https://strapi.io/" },
+      { text: "Antd", link: "https://ant.design/" }
+    ]
+  },
+  {
+    title: "Dynexo",
+    link: "https://www.dynexo.de/",
+    subtitle: "Team member",
+    description: ["Working closely with designer team via Figma", "Using Strapi as a headless CMS and support SEO."],
+    image: {
+      imageUrl: "/images/project-3.jpg",
+      imageAlt: "Image alt"
+    },
+    tags: [
+      { text: "NextJS", link: "https://nextjs.org/" },
+      { text: "Redux", link: "https://redux.js.org/" },
+      { text: "Strapi", link: "https://strapi.io/" },
+      { text: "TailWind", link: "https://tailwindcss.com/" },
+      { text: "Antd", link: "https://ant.design/" }
+    ]
+  },
+  {
+    title: "Taimi",
+    link: "",
+    subtitle: "Team member",
+    description: ["Managing system that can be adapted to processes.", "Tracking projects and tasks based on agile, kanban"],
+    image: {
+      imageUrl: "/images/project-4.jpg",
       imageAlt: "Image alt"
     },
     tags: [
       { text: "ReactJS", link: "https://react.dev/" },
-      { text: "NextJS", link: "https://react.dev/" },
-      { text: "Redux", link: "https://react.dev/" },
-      { text: "TailWind", link: "https://react.dev/" },
-      { text: "Antd", link: "https://react.dev/" }
+      { text: "Redux", link: "https://redux.js.org/" },
+      { text: "Strapi", link: "https://strapi.io/" },
+      { text: "TailWind", link: "https://tailwindcss.com/" },
+      { text: "Antd", link: "https://ant.design/" }
     ]
-  },
+  }
 ]
 const Project = () => {
   return (
     <div className="grid grid-cols-2 gap-8">
       {content?.length && content?.map((card, index: number) =>
         <Card
-          key={card.title + index}
+          key={card?.title + index}
+          link={card?.link}
           type="vertical"
           title={card.title || ""}
           subtitle={card.subtitle || ""}

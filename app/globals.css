@@ -18,21 +18,22 @@
 
 body {
   color: #fafafa;
-  background: rgba(0, 0, 0, 0.791);
+  background: #1c1c1c;
 }
 
 .text-highligh {
-  color: #a5f3fc
+  color: #4aa6b3
 }
 
 .link {
   color: #fafafa;
 
   &:hover {
-    color: #a5f3fc;
+    color: #4aa6b3;
   }
 }
-.transition{
+
+.transition {
   transition: all ease-in-out .3s;
 }
 

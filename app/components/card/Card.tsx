@@ -2,6 +2,7 @@ import React from 'react'
 import { CardHorizontal, CardVertical } from '.';
 
 export interface ICard {
+  link?: string,
   type?: string;
   title: string;
   subtitle?: string;
@@ -22,6 +23,7 @@ export enum CardType {
 }
 
 const Card = ({
+  link,
   type,
   title,
   subtitle,
@@ -32,6 +34,7 @@ const Card = ({
   let card
   switch (type) {
     case CardType.VERTICAL: card = <CardVertical
+      link={link}
       title={title || ""}
       subtitle={subtitle || ""}
       description={description || []}
