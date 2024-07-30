@@ -3,37 +3,52 @@ import { Card } from '.'
 
 const content = [
   {
-    title: "Title",
-    subtitle: "Subtitle",
-    description: ["Description112", "Description23", "Description1234", "Description53"],
+    title: "DISION Tech LLC",
+    subtitle: "Frontend Developer 2022 - 2024",
+    link: "https://dision.tech/",
+    description: ["Developing websites using Strapi for CMS", "Collaborated closely with backend developers to integrate frontend components with server-side logic through RESTful APIs", "Developed and maintained frontend components with NextJS, TypeScript, JavaScript, HTML, CSS, and Antd."],
     image: {
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/images/company-2.jpg",
       imageAlt: "Image alt"
     },
     tags: [
-      { text: "ReactJS", link: "https://react.dev/" },
-      { text: "NextJS", link: "https://react.dev/" },
-      { text: "Redux", link: "https://react.dev/" },
-      { text: "TailWind", link: "https://react.dev/" },
-      { text: "Antd", link: "https://react.dev/" }
+      { text: "Frontend", link: "" },
+      { text: "Website", link: "" },
+      { text: "Web-app", link: "" },
+      { text: "TailWind", link: "" },
+      { text: "Antd", link: "" }
     ]
   },
   {
-    title: "Title1",
-    subtitle: "Subtitle1",
-    description: ["Description11", "Description12", "Description3", "Description4"],
+    title: "3ForCom",
+    link: "",
+    subtitle: "IT Business Analyst 2021 - 2022",
+    description: ["Working closely with clients, technicians, and manager staff.", "Serving as a liaison between stakeholders and users.", "Ensuring solutions meet business needs and requirements.", "Working with engineers, product managers, designers, and stakeholders across the company to bring new features to the product."],
     image: {
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/images/company-1.jpg",
       imageAlt: "Image alt"
     },
     tags: [
-      { text: "ReactJS", link: "https://react.dev/" },
-      { text: "NextJS", link: "https://react.dev/" },
-      { text: "Redux", link: "https://react.dev/" },
-      { text: "TailWind", link: "https://react.dev/" },
-      { text: "Antd", link: "https://react.dev/" }
+      { text: "BA", link: "" },
+      { text: "Team-work", link: "" },
+      { text: "Project-management", link: "" }
     ]
   },
+  {
+    title: "The Coca-Cola Vietnam",
+    link: "",
+    subtitle: "Salesman 2019 - 2021",
+    description: ["Working directly with clients to clarify requirements.", "Building professional relationships with clients.", "Reported daily, weekly, and monthly about issues, risks, and performance."],
+    image: {
+      imageUrl: "/images/company-3.jpg",
+      imageAlt: "Image alt"
+    },
+    tags: [
+      { text: "Sales", link: "" },
+      { text: "Salesman", link: "" },
+      { text: "Coca-Cola", link: "" }
+    ]
+  }
 ]
 
 const Experience = () => {
@@ -42,6 +57,7 @@ const Experience = () => {
       {content?.length && content?.map((card, index: number) =>
         <Card
           key={card.title + index}
+          link={card?.link === "" ? "/" : card?.link}
           type="horizontal"
           title={card.title || ""}
           subtitle={card.subtitle || ""}

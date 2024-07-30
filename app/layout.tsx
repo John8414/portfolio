@@ -7,21 +7,26 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Huỳnh Đại Nguyên Frontend Developer",
-  description: "A Frontend Developer with experience in develop, and maintaining responsive web app to enhance user experience and business efficiency.",
+  description: "A Frontend Developer with experience in develop, and maintaining responsive web app",
   twitter: {
     card: "summary_large_image",
     title: "Huỳnh Đại Nguyên Frontend Developer",
-    description: "A Frontend Developer with experience in develop, and maintaining responsive web app to enhance user experience and business efficiency.",
-    images: "https://nguyenhd.herimaniac.click/avatar.jpg",
+    description: "A Frontend Developer with experience in develop, and maintaining responsive web app",
+    images: [{
+      url: "https://nguyenhd.herimaniac.click/avatar.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Huỳnh Đại Nguyên Frontend Developer"
+    }],
     siteId: "https://nguyenhd.herimaniac.click/"
   },
   openGraph: {
     type: "website",
     url: "https://nguyenhd.herimaniac.click/",
     title: "Huỳnh Đại Nguyên Frontend Developer",
-    description: "A Frontend Developer with experience in develop, and maintaining responsive web app to enhance user experience and business efficiency.",
+    description: "A Frontend Developer with experience in develop, and maintaining responsive web app",
     images: [{
-      url: "/avatar.jpg",
+      url: "https://nguyenhd.herimaniac.click/avatar.jpg",
       width: 1200,
       height: 630,
       alt: "Huỳnh Đại Nguyên Frontend Developer"
@@ -38,10 +43,10 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <title>Huỳnh Đại Nguyên Frontend Developer</title>
-        <meta name="description" content="A Frontend Developer with experience in develop, and maintaining responsive web app to enhance user experience and business efficiency." />
+        <meta name="description" content="A Frontend Developer with experience in develop, and maintaining responsive web app" />
         <meta name="keywords" content={"ReactJS, NextJS, Frontend"} />
         <meta property="og:title" content={"Huỳnh Đại Nguyên Frontend Developer"} />
-        <meta property="og:description" content={"A Frontend Developer with experience in develop, and maintaining responsive web app to enhance user experience and business efficiency."} />
+        <meta property="og:description" content={"A Frontend Developer with experience in develop, and maintaining responsive web app"} />
         <meta property="og:url" content={"https://nguyenhd.herimaniac.click/"} />
         <meta property="og:image" content={"https://nguyenhd.herimaniac.click/avatar.jpg"} />
         <link rel="canonical" href={"https://nguyenhd.herimaniac.click/"} />

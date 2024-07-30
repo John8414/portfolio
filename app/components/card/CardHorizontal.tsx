@@ -5,6 +5,7 @@ import React from 'react'
 import { ICard } from './Card';
 
 const CardHorizontal = ({
+  link,
   title,
   subtitle,
   description,
@@ -14,12 +15,14 @@ const CardHorizontal = ({
   const router = useRouter()
 
   return (
-    <div className='py-8 grid grid-cols-3 gap-8'>
-      <div className="w-full h-full">
-        <Image className="w-full rounded" src={image && image?.imageUrl || ""} alt={image && image?.imageAlt || ""} width={32} height={32} />
+    <div className='xl:py-8 grid xl:grid-cols-3 gap-8'>
+      <div className="w-full h-full hover:cursor-pointer col-span-3 xl:col-span-1"
+        onClick={() => { router.push(link || "/") }}
+      >
+        <Image className="w-full h-full rounded-2xl object-cover" src={image && image?.imageUrl || ""} alt={image && image?.imageAlt || ""} width={32} height={32} />
       </div>
-      <div className="col-span-2 flex flex-col gap-4">
-        <h3 className='text-2xl'>{title}</h3>
+      <div className="col-span-2 flex flex-col gap-4 items-start h-fit">
+        <h3 className='text-blue-regular xl:text-2xl text-xl'>{title}</h3>
         <h4 className='text-base'>{subtitle}</h4>
         <div className='flex flex-col gap-2'>
           {

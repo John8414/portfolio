@@ -43,6 +43,7 @@ const Card = ({
     />
       break;
     case CardType.HORIZONTAL: card = <CardHorizontal
+      link={link}
       title={title || ""}
       subtitle={subtitle || ""}
       description={description || []}
@@ -50,6 +51,7 @@ const Card = ({
       tags={tags}
     />
     default: card = <CardHorizontal
+      link={link}
       title={title || ""}
       subtitle={subtitle || ""}
       description={description || []}

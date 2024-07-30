@@ -74,11 +74,11 @@ const content = [
 ]
 const Project = () => {
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid xl:grid-cols-2 gap-8">
       {content?.length && content?.map((card, index: number) =>
         <Card
           key={card?.title + index}
-          link={card?.link}
+          link={card?.link === "" ? "/" : card?.link}
           type="vertical"
           title={card.title || ""}
           subtitle={card.subtitle || ""}
