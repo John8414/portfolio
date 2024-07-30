@@ -4,8 +4,8 @@ import React from 'react'
 const ColLeft = () => {
   return (
     <div className='flex flex-col gap-8'>
-      <div className='xl:w-2/5 h-full' >
-        <Image className='w-full rounded-2xl' width={150} height={150} src={"/avatar.jpg"} alt='image' />
+      <div className='lg:w-3/5 h-full' >
+        <Image className='w-full rounded-xl' width={150} height={150} src={"/avatar.jpg"} alt='image' />
       </div>
       <div className='block xl:hidden'>
         <h1 className='text-blue-regular uppercase xl:text-6xl text-4xl font-bold flex flex-col gap-2'>

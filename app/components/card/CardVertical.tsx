@@ -15,10 +15,10 @@ const CardVertical = ({
   const router = useRouter()
 
   return (
-    <div className='flex flex-col gap-4 items-start bg-gray-bg p-6 rounded-2xl hover:shadow-card-shadow'>
+    <div className='flex flex-col gap-4 items-start bg-gray-bg lg:p-4 p-6 rounded-2xl hover:shadow-card-shadow'>
       <div
         onClick={() => { router.push(link || "/") }}
-        className="relative w-full h-1/2 rounded-lg hover:cursor-pointer">
+        className="relative w-full xl:h-1/2 h-full rounded-lg hover:cursor-pointer">
         <Image className="w-full h-full rounded-lg object-cover" src={image && image?.imageUrl || ""} alt={image && image?.imageAlt || ""} width={32} height={32} />
         <div className="absolute bottom-0 w-full text-center bg-gradient-to-t from-background rounded-lg h-1/3 flex flex-col items-center justify-center">
           <h3 className='text-xl'>{title}</h3>
@@ -26,7 +26,7 @@ const CardVertical = ({
         </div>
       </div>
 
-      <div className='flex flex-col gap-2 pl-4'>
+      <div className='flex flex-col gap-2'>
         {
           description?.length && description?.map((item, index: number) =>
             <p className='text-gray-regular' key={item + index}>{item}</p>

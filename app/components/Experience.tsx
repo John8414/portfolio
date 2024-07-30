@@ -53,20 +53,18 @@ const content = [
 
 const Experience = () => {
   return (
-    <div>
-      {content?.length && content?.map((card, index: number) =>
-        <Card
-          key={card.title + index}
-          link={card?.link === "" ? "/" : card?.link}
-          type="horizontal"
-          title={card.title || ""}
-          subtitle={card.subtitle || ""}
-          description={card.description || ""}
-          image={card.image}
-          tags={card.tags}
-        />
-      )}
-    </div>
+    content?.length && content?.map((card, index: number) =>
+      <Card
+        key={card.title + index}
+        link={card?.link === "" ? "/" : card?.link}
+        type="horizontal"
+        title={card.title || ""}
+        subtitle={card.subtitle || ""}
+        description={card.description || ""}
+        image={card.image}
+        tags={card.tags}
+      />
+    )
   )
 }
 
