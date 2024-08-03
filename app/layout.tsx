@@ -49,6 +49,7 @@ export default function RootLayout({
         <meta property="og:description" content={"A Frontend Developer with experience in develop, and maintaining responsive web app"} />
         <meta property="og:url" content={"https://nguyenhd.herimaniac.click/"} />
         <meta property="og:image" content={"https://nguyenhd.herimaniac.click/avatar.jpg"} />
+        <meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport" />
         <link rel="canonical" href={"https://nguyenhd.herimaniac.click/"} />
       </Head>
       <body className={inter.className}>{children}</body>
