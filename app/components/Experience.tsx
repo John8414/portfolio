@@ -53,18 +53,20 @@ const content = [
 
 const Experience = () => {
   return (
-    content?.length && content?.map((card, index: number) =>
-      <Card
-        key={card.title + index}
-        link={card?.link === "" ? "/" : card?.link}
-        type="horizontal"
-        title={card.title || ""}
-        subtitle={card.subtitle || ""}
-        description={card.description || ""}
-        image={card.image}
-        tags={card.tags}
-      />
-    )
+    <div className='grid grid-cols-1 gap-8'>
+      {content?.length && content?.map((card, index: number) =>
+        <Card
+          key={card.title + index}
+          link={card?.link === "" ? "/" : card?.link}
+          type="horizontal"
+          title={card.title || ""}
+          subtitle={card.subtitle || ""}
+          description={card.description || ""}
+          image={card.image}
+          tags={card.tags}
+        />
+      )}
+    </div >
   )
 }
 

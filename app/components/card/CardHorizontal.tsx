@@ -15,7 +15,7 @@ const CardHorizontal = ({
   const router = useRouter()
 
   return (
-    <div className='xl:py-8 grid xl:grid-cols-3 gap-8 w-fit'>
+    <div className='grid xl:grid-cols-3 gap-8 w-fit'>
       <div className="w-full h-full hover:cursor-pointer col-span-3 xl:col-span-1"
         onClick={() => { router.push(link || "/") }}
       >
