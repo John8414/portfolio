@@ -10,9 +10,7 @@ const content = {
   title: "đại nguyên",
   subtitle: "Frontend Developer",
   sections: [
-    {
-      title: "Technical skills",
-    },
+
     {
       title: "Work experience",
       list: [
@@ -26,18 +24,21 @@ const content = {
       list: [
         "Soft Skills: Time Management, Teamwork, Communication.",
       ]
+    },
+    {
+      title: "Technical skills",
     }
   ]
 }
 const ColRight = () => {
-  const [slide, setSlide] = useState("technical-skills")
+  const [slide, setSlide] = useState("work-experience")
   let block
   switch (slide) {
-    case "technical-skills": block = <Skills />
-      break;
     case "work-experience": block = <Experience />
       break;
     case "project": block = <Project />
+      break;
+    case "technical-skills": block = <Skills />
       break;
     default: block = <Skills />
   }
